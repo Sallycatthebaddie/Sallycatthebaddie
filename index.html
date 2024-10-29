@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sally Cat Cafe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f8f8f8;
+        }
+        #scratchCard {
+            width: 300px;
+            height: 200px;
+            background-color: silver;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        #winnerMessage {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Sally Cat Cafe!</h1>
+    <div id="scratchCard" onclick="revealWinner()">
+        <div id="winnerMessage">🎉 You won a meal at Sally Cat Cafe! 🎉</div>
+    </div>
+    <p>Scratch to reveal your prize!</p>
+
+    <script>
+        function revealWinner() {
+            document.getElementById('winnerMessage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
